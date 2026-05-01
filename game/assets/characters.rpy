@@ -3,17 +3,18 @@ define mc = Character(
     color="#f4a7b9"
 )
 
-define rival = Character(
+define orion = Character(
     "Orion Hale",
     color="#7ec8e3"
 )
 
 define teacher = Character(
     "Teacher",
-    color = Character("", what_style="narrator")
+    color="#c8b8a2"
 )
 
 define narrator = Character(
-    "",
-    what_style="narrator"
+    None,
+    what_style="narrator_what",
+    window_style="narrator_window"
 )

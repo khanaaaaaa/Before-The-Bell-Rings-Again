@@ -4,6 +4,7 @@ label rival_explains_calm:
 
 label rival_explains_sharp:
 
-    rival "My problem is that you were {i}right{/i} and still lost marks."
-    rival "That should bother you more than it bothers me."
+    orion "My problem is that you were {i}right{/i} and still lost marks."
+    orion "That should bother you more than it bothers me."
+
  

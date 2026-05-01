@@ -101,7 +101,6 @@ screen say(who, what):
         id "window"
 
         if who is not None:
-
             window:
                 id "namebox"
                 style "namebox"
@@ -109,16 +108,30 @@ screen say(who, what):
 
         text what id "what"
 
-
-    ## If there's a side image, display it above the text. Do not display on the
-    ## phone variant - there's no room.
     if not renpy.variant("small"):
         add SideImage() xalign 0.0 yalign 1.0
 
 
-## Make the namebox available for styling through the Character object.
 init python:
     config.character_id_prefixes.append('namebox')
+
+style narrator_window:
+    xalign 0.5
+    xsize 900
+    yalign 0.88
+    ysize None
+    background Frame(Solid("#1a1a2ecc"), 20, 14, 20, 14)
+    padding (28, 16, 28, 16)
+
+style narrator_what:
+    font "DejaVuSans.ttf"
+    size 28
+    color "#d4b8e0"
+    italic True
+    textalign 0.5
+    xalign 0.5
+    layout "subtitle"
+    line_spacing 6
 
 style window is default
 style say_label is default
@@ -128,37 +141,39 @@ style say_thought is say_dialogue
 style namebox is default
 style namebox_label is say_label
 
-
 style window:
     xalign 0.5
     xfill True
-    yalign gui.textbox_yalign
-    ysize gui.textbox_height
-
-    background Image("gui/textbox.png", xalign=0.5, yalign=1.0)
+    yalign 1.0
+    ysize 220
+    background Frame(Solid("#0d0d1acc"), 0, 0, 0, 0)
+    padding (0, 0, 0, 0)
 
 style namebox:
-    xpos gui.name_xpos
-    xanchor gui.name_xalign
-    xsize gui.namebox_width
-    ypos gui.name_ypos
-    ysize gui.namebox_height
-
-    background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
-    padding gui.namebox_borders.padding
+    xpos 80
+    xanchor 0.0
+    xsize None
+    ypos -38
+    ysize 52
+    background Frame(Solid("#f4a7b922"), 16, 6, 16, 6)
+    padding (18, 6, 18, 6)
 
 style say_label:
-    properties gui.text_properties("name", accent=True)
-    xalign gui.name_xalign
+    font "DejaVuSans.ttf"
+    size 30
+    color "#f4a7b9"
+    bold True
+    xalign 0.0
     yalign 0.5
 
 style say_dialogue:
-    properties gui.text_properties("dialogue")
-
-    xpos gui.dialogue_xpos
-    xsize gui.dialogue_width
-    ypos gui.dialogue_ypos
-
+    font "DejaVuSans.ttf"
+    size 30
+    color "#ede6f0"
+    xpos 80
+    xsize 1760
+    ypos 30
+    line_spacing 8
     adjust_spacing False
 
 ## Input screen ################################################################
@@ -351,30 +366,40 @@ style navigation_button_text:
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
 
 screen main_menu():
-
-    ## This ensures that any other menu screen is replaced.
     tag menu
 
     add gui.main_menu_background
 
-    ## This empty frame darkens the main menu.
-    frame:
-        style "main_menu_frame"
+    add Solid("#0d0d1a99")
 
-    ## The use statement includes another screen inside this one. The actual
-    ## contents of the main menu are in the navigation screen.
-    use navigation
+    add Solid("#f4a7b944") xalign 0.5 xsize 1920 ysize 1 ypos 160
 
-    if gui.show_name:
+    vbox:
+        xalign 0.96
+        yalign 0.88
+        spacing 6
 
-        vbox:
-            style "main_menu_vbox"
+        text "[config.name!t]":
+            style "main_menu_title"
 
-            text "[config.name!t]":
-                style "main_menu_title"
+        text "v[config.version]":
+            style "main_menu_version"
 
-            text "[config.version]":
-                style "main_menu_version"
+    vbox:
+        style_prefix "navigation"
+        xpos 80
+        yalign 0.88
+        spacing 10
+
+        textbutton _("Start")       action Start()
+        textbutton _("Load")        action ShowMenu("load")
+        textbutton _("Preferences") action ShowMenu("preferences")
+        textbutton _("About")       action ShowMenu("about")
+
+        if renpy.variant("pc"):
+            textbutton _("Quit") action Quit(confirm=False)
+
+    add Solid("#7ec8e344") xalign 0.5 xsize 1920 ysize 1 ypos 920
 
 
 style main_menu_frame is empty
@@ -384,26 +409,40 @@ style main_menu_title is main_menu_text
 style main_menu_version is main_menu_text
 
 style main_menu_frame:
-    xsize 420
+    xsize 0
     yfill True
-
-    background "gui/overlay/main_menu.png"
+    background None
 
 style main_menu_vbox:
-    xalign 1.0
-    xoffset -30
-    xmaximum 1200
-    yalign 1.0
-    yoffset -30
-
-style main_menu_text:
-    properties gui.text_properties("main_menu", accent=True)
+    xalign 0.96
+    yalign 0.88
 
 style main_menu_title:
-    properties gui.text_properties("title")
+    font "DejaVuSans.ttf"
+    size 64
+    color "#f4a7b9"
+    bold True
+    textalign 1.0
 
 style main_menu_version:
-    properties gui.text_properties("version")
+    font "DejaVuSans.ttf"
+    size 22
+    color "#7ec8e388"
+    textalign 1.0
+
+style navigation_button:
+    size_group "navigation"
+    background None
+    hover_background None
+    padding (0, 8, 0, 8)
+
+style navigation_button_text:
+    font "DejaVuSans.ttf"
+    size 34
+    color "#c8b8e8"
+    hover_color "#f4a7b9"
+    selected_color "#7ec8e3"
+    bold False
 
 
 ## Game Menu screen ############################################################

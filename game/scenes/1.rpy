@@ -1,6 +1,5 @@
 label prologue:
     scene bg classroom
-    with with fade
 
     narrator "Midterm results day."
     narrator "The list goes up at 8: 47 AM."
@@ -8,7 +7,6 @@ label prologue:
     narrator "You already know"
 
     scene bg results_board
-    with with dissolve
 
     narrator "Rank 2. Again."
     narrator "And above you."
@@ -20,7 +18,6 @@ label prologue:
     mc "..."
 
     scene bg classroom
-    with dissolve
 
     narrator "You're stuffing your paper into your bag when you hear footsteps beside you."
 
@@ -47,4 +44,4 @@ label prologue:
         "...Show me.":
             jump rival_explains_calm
 
-    return
+    jump library_scene

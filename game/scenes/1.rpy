@@ -6,6 +6,16 @@ label prologue:
     narrator "You don't run to check it."
     narrator "You already know"
 
+    narrator "You've always known."
+    narrator "That's the thing nobody understands about you."
+    narrator "You don't panic before results."
+
+    thought "Riya got 91 last time, she studied harder this time. Probably 93 now."
+    thought "Kabir stopped taking notes in week three. Drp of atleast four marks now."
+    thought "Orion Hale."
+    thought "..."
+    thought "Don't think about Orion Hale."
+
     scene bg results_board
 
     narrator "Rank 2. Again."
@@ -15,9 +25,17 @@ label prologue:
     narrator "The gap this time?"
     narrator "0.1 marks."
 
+    narrator "You stand there for exactly three seconds."
+    narrator "Then you smile."
+    narrator "Because someone in watching."
+    narrator "And you know how to look like someone who doesn't care."
+
     mc "..."
 
-    scene bg classroom
+    narator "The smile costs nothing."
+    narrator "You've been practicing it since you were eleven."
+
+    scene bg classroom with dissolve
 
     narrator "You're stuffing your paper into your bag when you hear footsteps beside you."
 
@@ -25,7 +43,7 @@ label prologue:
 
     mc "What."
 
-    narrator "He holds your paper."
+    narrator "He holds out your paper."
     narrator "Question 3."
     narrator "Red ink."
     narrator "Half mark deducted."
@@ -38,10 +56,47 @@ label prologue:
 
     orion "No. It's not."
 
+    narrator "You look at him properly for the first time in years."
+    narrator "He's not gloating."
+    narrator "And that's the part that bothers you."
+
     menu:
         "What's your problem? You already won.":
+            $ respect -= 1
             jump rival_explains_sharp
         "...Show me.":
+            $ respect += 1
             jump rival_explains_calm
+
+label rival_explains_sharp:
+
+    orion "My problem is that you were {i}right{/i} and still lost marks."
+    orion "That should bother you more than it bothers me."
+
+    narrator "It does bother you."
+    narrator "More than he will ever know."
+    narrator "But you don't say that."
+    narrator "You never say that."
+
+    mc "I'll live."
+
+    orion "You mean you lost?"
+    orion "That's different."
+
+    mc "Aww~ You're worried about me?"
+    mc "I'm flattered."
+    mc "Don't tell me you have feelings for me now?"
+
+label rival_explains_calm:
+
+    orion "Look at your answer."
+    orion "You wrote 2.5 times 10 to the power of 3."
+    orion "The data had three significant figures."
+
+    mc "The value is identical."
+
+    orion "The information isn't."
+
+    thought "I hope he trips on his huge ego."
 
     jump library_scene

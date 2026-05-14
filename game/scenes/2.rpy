@@ -77,6 +77,7 @@ label chapter_one:
     jump chapter_one_library
 
     scene bg library
+    with dissolve
     
     orion "Let's start from the beginning."
     orion "What's a charge?"
@@ -120,5 +121,66 @@ label chapter_one:
     orion "My turn."
     mc "Why does your smile look sinister?"
 
-    return
+    orion "Does it?"
 
+    narrator "He doesn't stop smiling."
+    
+    orion "Do you actually like Physics?"
+
+    narrator "You laugh."
+    narrator "The way you laugh at everything when it catches you off guard."
+    narrator "It's a reflex."
+
+    narrator "Then you stop."
+
+    mc "..."
+
+    mc "That's not a Physics question."
+
+    orion "No, it's not."
+
+    mc "Then it doesn't count as your turn."
+
+    orion "I didn't say it did."
+
+    narrator "He goes back to his notes."
+    narrator "You go back to yours."
+    narrator "But the question stays."
+
+    thought "'Do you even like Physics?'"
+
+    thought "I don't know."
+    thought "I actually don't know."
+    thought "And that is the most unsettling thing that has happened to me all week."
+    thought "Including losing 0.1 marks."
+
+    jump chapter_one_end
+
+label chapter_one_end:
+
+    scene bg school_corridor
+    with with fade
+
+    narrator "You walk out of the library at 6 PM."
+    narrator "The corridor is empty."
+    narrator "He's half a step ahead like always."
+
+    mc "Orion."
+
+    narrator "He stops."
+
+    mc "They gave me 0.05 back on the remark."
+
+    orion "Still second."
+
+    mc "Still second."
+
+    narrator "A beat."
+
+    orion "Next chapter is units and dimensions."
+    orion "Don't skip the dimensional analysis steps."
+
+    thought "He doesn't even wait for a reply."
+    thought "He just walked away."
+
+    jump chapter_two

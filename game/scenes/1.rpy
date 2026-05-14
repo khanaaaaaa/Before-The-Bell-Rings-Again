@@ -100,3 +100,42 @@ label rival_explains_calm:
     thought "I hope he trips on his huge ego."
 
     jump library_scene
+
+label library_scene:
+    scene bg library
+
+    narrator "It becomes a thing."
+    narrator "After school, library."
+    narrator "His notes and your questions."
+
+    thought "This is strategic."
+    thought "He's the only person in this school whose study methods are worth reverse engineering."
+    thought "This is my strategy."
+
+    narrator "You open the notebook to a fresh page."
+    narrator "The left side is Physics."
+    narrator "The right side..."
+    narrator "You close before he can see it."
+
+    thought "Orion Hale."
+    thought "Taps pencil when emotionally irritated."
+    thought "Avoids eye contact when complimented."
+    thought "Smiles after correcting someone.. but not today."
+    thought "Doesn't react to praise as he hears it often."
+    thought "Asks questions he already knows the answer to."
+
+    orion "You're not writing."
+
+    mc "I'm thinking."
+
+    orion "About Physics?"
+
+    narrator "A beat."
+
+    mc "Obviously."
+
+    narrator "He looks at you for one second longer than necessary."
+    narrator "Then looks back at his page."
+    
+    jump chapter_one
+

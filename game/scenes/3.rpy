@@ -141,3 +141,55 @@ label chapter_two_test:
     narrator "He's right."
 
     mc "You pay a lot of attention to how I answer things."
+
+    orion "You pay a lot of attention to how everyone does things."
+    orion "I just pay attention to you."
+
+    narrator "He says it like its neutral observation."
+
+    jump chapter_two_end
+
+label chapter_two_end:
+
+    scene bg room
+    with fade
+
+    narrator "Your room at 11 PM."
+    narrator "Physics notes open."
+    narrator "You've read through the same paragraph four times."
+
+    narrator "You pick up the notebook."
+    narrator "Right side."
+    narrator "You read what you've written about him."
+
+    thought "Taps pencil when emotinally irritated."
+    thought "Avoids eye contact when complimented."
+    thought "Asks questions he already knows the answer to.. except one."
+    thought "Doesn't react to praise as he hears it often."
+    thought "Pays attention to me."
+
+    narrator "You wrote that last one tonight."
+    narrator "You stare at it."
+
+    narrator "You've kept notebooks like this since you were thirteen."
+    narrator "Everyone you've ever needed to understand."
+    narrator "To learn their patterns."
+    narrator "You use their patterns to stay useful."
+    narrator "To stay liked."
+    narrator "To stay {i}relevant.{/i}"
+
+    narrator "You've never once written about someone and felt uncomfortable doing it."
+
+    narrator "Until now."
+
+    thought "Why is this different.."
+    thought "It's the same system."
+    thought "He's just another variable."
+    thought "Then why does writing about him feel like something I shouldn't be doing."
+
+    narrator "You close the notebook."
+    narrator "You open your Physics textbook."
+    narrator "You read the same paragraph the fifth time."
+    narrator "You don't retain a single word."
+
+    jump chapter_three

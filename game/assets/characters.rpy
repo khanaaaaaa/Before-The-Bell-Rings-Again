@@ -1,5 +1,7 @@
+default player_name = "You"
+
 define mc = Character(
-    "You",
+    "[player_name]",
     color="#f4a7b9"
 )
 

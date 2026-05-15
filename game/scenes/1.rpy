@@ -32,7 +32,7 @@ label prologue:
 
     mc "..."
 
-    narator "The smile costs nothing."
+    narrator "The smile costs nothing."
     narrator "You've been practicing it since you were eleven."
 
     scene bg classroom with dissolve

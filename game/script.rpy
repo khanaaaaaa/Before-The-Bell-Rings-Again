@@ -1,4 +1,8 @@
-﻿label start:
+﻿default respect = 0
+default changed_style = False
+default player_name = "You"
+
+label start:
     jump name_entry
 
 

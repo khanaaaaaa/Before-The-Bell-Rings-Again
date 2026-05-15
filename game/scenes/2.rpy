@@ -158,8 +158,8 @@ label chapter_one:
 
 label chapter_one_end:
 
-    scene bg school_corridor
-    with with fade
+    scene bg school_corridor at bg_fit
+    with fade
 
     narrator "You walk out of the library at 6 PM."
     narrator "The corridor is empty."

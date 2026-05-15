@@ -1,5 +1,3 @@
-default player_name = "You"
-
 define mc = Character(
     "[player_name]",
     color="#f4a7b9"
@@ -16,6 +14,12 @@ define teacher = Character(
 )
 
 define narrator = Character(
+    None,
+    what_style="narrator_what",
+    window_style="narrator_window"
+)
+
+define thought = Character(
     None,
     what_style="narrator_what",
     window_style="narrator_window"

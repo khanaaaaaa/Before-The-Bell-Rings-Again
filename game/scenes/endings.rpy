@@ -24,8 +24,8 @@ label ending_perfect_answer:
 
     narrator "It doesn't."
 
-    scene bg school_corridor
-    with with dissolve
+    scene bg school_corridor at bg_fit
+    with dissolve
 
     narrator "He finds you in the corridor."
     narrator "He always finds you."

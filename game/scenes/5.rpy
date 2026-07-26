@@ -1,146 +1,138 @@
-label chapter_four:
+label chapter_three:
 
-    scene bg library
+    scene bg rooftop
 
-    narrator "Ten days before finals."
-    narrator "The library is full for the first time all year."
-    narrator "Everyone suddenly remembers it exists."
+    narrator "He doesn't go to the library after class."
+    narrator "He goes to the roof."
+    narrator "You know this because you follow him."
+    narrator "You tell yourself it's strategic."
 
-    narrator "Your table — you've started thinking of it as your table — has three extra people at it."
-    narrator "Riya and two people from B section."
-    narrator "Loud people."
-    narrator "People who study by reading their notes aloud to each other."
+    narrator "His notebook is closed."
+    narrator "That's the first time you've ever seen that during study hours."
+    narrator "It looks wrong."
+    narrator "Like a clock with no hands."
 
-    thought "I cannot work like this."
+    mc "You're not studying."
 
-    narrator "Orion is already at the smaller table by the window."
-    narrator "He's moved."
-    narrator "He's left the chair across from him empty."
+    orion "Observant."
 
-    thought "He moved."
-    thought "He moved to a table with one empty chair."
-    thought "That's not a coincidence."
-    thought "He doesn't do things by accident."
-    thought "I know that."
-    thought "I've known that for a while now."
-    thought "Sit down."
+    mc "Four days distracted. Sign error in Gauss's Law yesterday."
+    mc "You never make sign errors."
 
-    narrator "You sit down."
+    narrator "Something shifts in his face."
+    narrator "Not the usual careful neutrality."
+    narrator "Something underneath it."
 
-    orion "Magnetism today."
+    orion "You track my errors."
 
-    mc "I know."
+    mc "I track everything."
 
-    orion "You've been avoiding it."
+    orion "Why."
 
-    mc "I haven't."
+    narrator "You don't have an answer that isn't embarrassing."
+    narrator "So you say the true one."
 
-    orion "Your notes skip from chapter fourteen to sixteen."
+    mc "Because you're the only person here worth tracking."
 
-    narrator "You say nothing."
-    narrator "Because he's right."
-    narrator "He's always right about the things you don't say."
+    narrator "He looks at the city."
 
-    mc "Magnetism is conceptually inconsistent."
+    orion "My father wants me to drop Physics."
+    orion "Commerce is more practical."
 
-    orion "It's not. You just haven't found the thread yet."
+    mc "That's the stupidest thing I've ever heard."
 
-    mc "There's a thread?"
+    orion "He's not wrong about the practicality."
 
-    orion "There's always a thread."
-    orion "Moving charges create magnetic fields."
-    orion "Magnetic fields exert force on moving charges."
-    orion "That's the whole thing."
-    orion "Everything else is just geometry."
+    mc "He's wrong about you."
 
-    thought "Just geometry."
-    thought "He says it like it's obvious."
-    thought "It is obvious."
-    thought "Why didn't I see that."
-    thought "I've been staring at this chapter for a week."
-    thought "He said it in two sentences."
+    narrator "You say it before you can stop yourself."
+    narrator "He turns."
+    narrator "You don't take it back."
+    narrator "You're usually very good at taking things back."
 
-    mc "Why didn't the textbook just say that."
+    thought "Because it's true."
+    thought "Because the way he looks when something clicks—"
+    thought "Stop."
 
-    orion "Because textbooks are written to be complete, not clear."
+    orion "You don't know me."
 
-    mc "That's a design flaw."
+    mc "I know you tap your pencil when you're irritated."
+    mc "I know you avoid eye contact when someone compliments you."
+    mc "I know you ask questions you already know the answer to."
+    mc "I know you moved to the table by the window when the library got crowded."
+    mc "And left one chair empty."
 
-    orion "Yes."
+    narrator "A long silence."
 
-    narrator "You open to chapter fifteen."
-    narrator "You find the thread."
-    narrator "It takes nine minutes."
-    narrator "He doesn't say anything while you work."
-    narrator "He just reads."
-    narrator "Like he knew you needed the silence."
+    orion "That's observation."
 
-    thought "He knew I needed the silence."
-    thought "I didn't tell him that."
-    thought "He just knew."
-    thought "I don't know what to do with someone who just knows."
-    thought "I've never had to."
+    mc "Same thing."
 
-    narrator "An hour passes."
-    narrator "The library thins out."
-    narrator "Riya waves at you on her way out."
-    narrator "You wave back."
-    narrator "The performance is automatic."
-    narrator "You barely notice you're doing it."
+    narrator "He almost smiles."
+    narrator "Not quite."
+    narrator "Close enough."
 
-    narrator "Then:"
+    orion "Gauss's Law. From the beginning."
 
-    orion "Can I ask you something."
+    mc "You already know Gauss's Law."
 
-    mc "You always ask me things."
+    orion "Teach it anyway."
 
-    orion "Not about Physics."
+    thought "Like he just wants to hear me explain things."
+    thought "Like that's something someone would want."
+    thought "Like I'm worth listening to."
 
-    narrator "You look up."
+    narrator "You sit beside him."
+    narrator "You teach him Gauss's Law."
+    narrator "He already knows all of it."
+    narrator "The sun goes down while you're talking."
+    narrator "Neither of you mentions it."
 
-    mc "Then what."
+    menu:
+        "Ask him what he decided.":
+            $ respect += 1
+            jump rooftop_ask
+        "Don't ask. Just stay.":
+            jump rooftop_stay
 
-    orion "Why do you smile when people are watching."
-    orion "And stop when they're not."
+label rooftop_ask:
 
-    narrator "The library is quiet around you."
-    narrator "It feels very quiet."
-    narrator "Like the question has taken up all the air."
+    mc "Commerce or Physics."
 
-    mc "I don't know what you're talking about."
+    orion "Physics."
 
-    orion "You do."
+    mc "Because?"
 
-    narrator "You look at your notebook."
-    narrator "The thread of magnetism is right there on the page."
-    narrator "Clear and simple."
-    narrator "Moving charges create fields."
-    narrator "Fields exert force."
-    narrator "Everything else is geometry."
+    orion "Because someone told me my father was wrong about me."
+    orion "And I believed them."
 
-    thought "I've been performing since I was eleven."
-    thought "I learned early that being seen as fine is safer than being seen."
-    thought "I learned that if you smile first, no one looks for what's underneath."
-    thought "I'm not going to say any of that."
-    thought "I'm not going to say any of that to him."
-    thought "He already knows too much."
+    mc "That's a terrible reason to make a life decision."
 
-    mc "It's easier."
+    orion "Probably."
 
-    orion "Easier than what."
+    narrator "He's smiling."
+    narrator "Actually smiling."
+    narrator "You don't have a category for this one."
 
-    mc "Than the alternative."
+    thought "I'm going to need a new page."
 
-    narrator "He looks at you for a long time."
-    narrator "Just looking."
-    narrator "Like you're something he's trying to understand."
+    jump chapter_four
 
-    orion "You don't have to do that here."
+label rooftop_stay:
 
-    narrator "You don't answer."
-    narrator "You go back to your notes."
-    narrator "But something in your chest does something you don't have a name for."
-    narrator "You don't look for one."
-    narrator "You're afraid of what you'd find."
+    narrator "You don't ask."
+    narrator "You stay until a janitor tells you both to leave."
+    narrator "At the bottom of the stairs he says:"
 
-    jump chapter_four_b
+    orion "Thank you."
+
+    mc "For what."
+
+    orion "For not asking."
+
+    narrator "You walk in opposite directions."
+    narrator "You spend the whole walk home trying to figure out how he knew."
+    narrator "You don't figure it out."
+    narrator "That's new."
+
+    jump chapter_four

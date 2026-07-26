@@ -260,4 +260,186 @@ label chapter_two_b:
 
     jump chapter_three
 
+label chapter_three:
 
+    scene bg classroom
+
+    narrator "Two weeks before finals."
+    narrator "The classroom is quieter than usual."
+    narrator "Everyone is either panicking or performing calm."
+    narrator "You are performing calm."
+    narrator "You're very good at it."
+
+    narrator "Orion Hale is staring out the window."
+
+    thought "He's been distracted for four days."
+    thought "He's still scoring higher than everyone else."
+    thought "But I can see it."
+    thought "Something is off."
+    thought "I notice things like that."
+    thought "I notice things like that about everyone."
+    thought "That's what I tell myself."
+    thought "I've been telling myself that for four days."
+
+    narrator "After class he doesn't go to the library."
+    narrator "He goes to the roof."
+    narrator "You know this because you follow him."
+    narrator "You tell yourself it's strategic."
+    narrator "You've been telling yourself a lot of things lately."
+
+    scene bg rooftop
+
+    narrator "He's sitting on the ledge with his notebook closed."
+    narrator "That's the first time you've ever seen his notebook closed during study hours."
+    narrator "It looks wrong."
+    narrator "Like a clock with no hands."
+
+    mc "You're not studying."
+
+    orion "Observant."
+
+    mc "What's wrong with you."
+
+    orion "Nothing."
+
+    mc "You've been distracted for four days."
+    mc "Your derivation of Gauss's Law yesterday had a sign error."
+    mc "You never make sign errors."
+
+    narrator "He looks at you."
+    narrator "Something in his expression shifts."
+    narrator "Not the usual careful neutrality."
+    narrator "Something underneath it."
+    narrator "Something that looks almost like relief."
+    narrator "That you noticed."
+    narrator "That you said it."
+
+    orion "You track my errors."
+
+    mc "I track everything."
+
+    orion "Why?"
+
+    narrator "You don't have an answer that isn't embarrassing."
+    narrator "So you say the true one."
+    narrator "Because it's faster."
+
+    mc "Because you're the only person in this school worth tracking."
+
+    narrator "Silence."
+    narrator "The wind moves."
+    narrator "He looks back at the city."
+
+    orion "My father thinks I should drop Physics."
+    orion "Take Commerce instead."
+    orion "More practical, he says."
+
+    mc "That's the stupidest thing I've ever heard."
+
+    orion "He's not wrong about the practicality."
+
+    mc "He's wrong about you."
+
+    narrator "You say it before you can stop yourself."
+    narrator "He turns to look at you."
+    narrator "You don't take it back."
+    narrator "You're not sure why."
+    narrator "You're usually very good at taking things back."
+
+    thought "Because it's true."
+    thought "Because watching him explain inverse square laws like they're obvious—"
+    thought "Because the way he looks when a concept clicks—"
+    thought "Because he lives in Physics the way I've only ever visited—"
+    thought "Stop."
+    thought "Stop right now."
+
+    orion "You don't know me."
+
+    mc "I know you tap your pencil when you're irritated."
+    mc "I know you avoid eye contact when someone compliments you."
+    mc "I know you ask questions you already know the answer to."
+    mc "I know you wrote 'what she gets right' in your notebook margin."
+    mc "I know you've never once been late to the library."
+    mc "I know you moved to the table by the window when the library got crowded."
+    mc "And I know you left one chair empty."
+
+    narrator "A long silence."
+    narrator "Longer than the others."
+
+    orion "That's observation."
+
+    mc "It's the same thing."
+
+    narrator "He almost smiles."
+    narrator "Not quite."
+    narrator "Close enough that you notice."
+    narrator "You catalogue it."
+    narrator "New entry."
+
+    orion "You're very strange."
+
+    mc "You're very annoying."
+
+    orion "I know."
+
+    narrator "He opens his notebook."
+    narrator "Finds the page."
+    narrator "Picks up his pen."
+
+    orion "Gauss's Law. From the beginning."
+
+    mc "You already know Gauss's Law."
+
+    orion "Teach it anyway."
+
+    thought "There it is again."
+    thought "Teach it anyway."
+    thought "Like he just wants to hear me explain things."
+    thought "Like that's something someone would want."
+    thought "Like I'm worth listening to."
+    thought "Like I'm worth something other than a rank."
+
+    narrator "You sit down beside him on the ledge."
+    narrator "You teach him Gauss's Law."
+    narrator "He already knows all of it."
+    narrator "He asks questions anyway."
+    narrator "You answer them."
+    narrator "The sun goes down while you're talking."
+    narrator "Neither of you mentions it."
+
+    menu:
+        "Ask him what he decided.":
+            $ respect += 1
+            jump rooftop_ask
+        "Don't ask. Just stay.":
+            jump rooftop_stay
+
+
+label rooftop_ask:
+
+    mc "So. Commerce or Physics."
+
+    orion "Physics."
+
+    mc "Because?"
+
+    orion "Because someone told me my father was wrong about me."
+    orion "And I believed them."
+
+    narrator "You look away."
+    narrator "At the city."
+    narrator "At nothing in particular."
+
+    mc "That's a terrible reason to make a life decision."
+
+    orion "Probably."
+
+    narrator "He's smiling now."
+    narrator "Actually smiling."
+    narrator "It looks different from the ones you've catalogued."
+    narrator "You don't have a category for this one."
+
+    thought "I need a new page."
+    thought "I'm going to need a lot of new pages."
+
+    jump chapter_four

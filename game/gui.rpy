@@ -26,12 +26,12 @@ define config.check_conflicting_properties = True
 
 define gui.accent_color        = '#f4a7b9'
 define gui.idle_color          = '#c8b8e8'
-define gui.idle_small_color    = '#a090c0'
-define gui.hover_color         = '#f4a7b9'
+define gui.idle_small_color    = '#9080b0'
+define gui.hover_color         = '#ffffff'
 define gui.selected_color      = '#7ec8e3'
-define gui.insensitive_color   = '#7070707f'
-define gui.muted_color         = '#3a2a4a'
-define gui.hover_muted_color   = '#5a3a6a'
+define gui.insensitive_color   = '#ffffff40'
+define gui.muted_color         = '#2a1a3a'
+define gui.hover_muted_color   = '#4a2a5a'
 define gui.text_color          = '#ede6f0'
 define gui.interface_text_color = '#c8b8e8'
 
@@ -48,22 +48,22 @@ define gui.name_text_font = "DejaVuSans.ttf"
 define gui.interface_text_font = "DejaVuSans.ttf"
 
 ## The size of normal dialogue text.
-define gui.text_size = 33
+define gui.text_size = 32
 
 ## The size of character names.
-define gui.name_text_size = 45
+define gui.name_text_size = 38
 
 ## The size of text in the game's user interface.
-define gui.interface_text_size = 33
+define gui.interface_text_size = 30
 
 ## The size of labels in the game's user interface.
-define gui.label_text_size = 36
+define gui.label_text_size = 34
 
 ## The size of text on the notify screen.
-define gui.notify_text_size = 24
+define gui.notify_text_size = 22
 
 ## The size of the game's title.
-define gui.title_text_size = 75
+define gui.title_text_size = 80
 
 
 ## Main and Game Menus #########################################################
@@ -79,7 +79,7 @@ define gui.game_menu_background = "gui/game_menu.png"
 ## time.
 
 ## The height of the textbox containing dialogue.
-define gui.textbox_height = 278
+define gui.textbox_height = 250
 
 ## The placement of the textbox vertically on the screen. 0.0 is the top, 0.5 is
 ## center, and 1.0 is the bottom.
@@ -88,7 +88,7 @@ define gui.textbox_yalign = 1.0
 
 ## The placement of the speaking character's name, relative to the textbox.
 ## These can be a whole number of pixels from the left or top, or 0.5 to center.
-define gui.name_xpos = 360
+define gui.name_xpos = 300
 define gui.name_ypos = 0
 
 ## The horizontal alignment of the character's name. This can be 0.0 for left-
@@ -112,11 +112,11 @@ define gui.namebox_tile = False
 ## The placement of dialogue relative to the textbox. These can be a whole
 ## number of pixels relative to the left or top side of the textbox, or 0.5 to
 ## center.
-define gui.dialogue_xpos = 402
-define gui.dialogue_ypos = 75
+define gui.dialogue_xpos = 300
+define gui.dialogue_ypos = 65
 
 ## The maximum width of dialogue text, in pixels.
-define gui.dialogue_width = 1116
+define gui.dialogue_width = 1320
 
 ## The horizontal alignment of the dialogue text. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
@@ -171,7 +171,7 @@ define gui.confirm_button_text_xalign = 0.5
 define gui.page_button_borders = Borders(15, 6, 15, 6)
 
 define gui.quick_button_borders = Borders(15, 6, 15, 0)
-define gui.quick_button_text_size = 21
+define gui.quick_button_text_size = 20
 define gui.quick_button_text_idle_color = gui.idle_small_color
 define gui.quick_button_text_selected_color = gui.accent_color
 
@@ -186,16 +186,16 @@ define gui.quick_button_text_selected_color = gui.accent_color
 ##
 ## Choice buttons are used in the in-game menus.
 
-define gui.choice_button_width = 1185
+define gui.choice_button_width = 1100
 define gui.choice_button_height = None
 define gui.choice_button_tile = False
-define gui.choice_button_borders = Borders(150, 8, 150, 8)
+define gui.choice_button_borders = Borders(120, 10, 120, 10)
 define gui.choice_button_text_font = gui.text_font
-define gui.choice_button_text_size = gui.text_size
+define gui.choice_button_text_size = 30
 define gui.choice_button_text_xalign = 0.5
-define gui.choice_button_text_idle_color = '#707070'
+define gui.choice_button_text_idle_color = '#c8b8e8'
 define gui.choice_button_text_hover_color = "#ffffff"
-define gui.choice_button_text_insensitive_color = '#7070707f'
+define gui.choice_button_text_insensitive_color = '#ffffff30'
 
 
 ## File Slot Buttons ###########################################################
@@ -208,7 +208,7 @@ define gui.choice_button_text_insensitive_color = '#7070707f'
 define gui.slot_button_width = 414
 define gui.slot_button_height = 309
 define gui.slot_button_borders = Borders(15, 15, 15, 15)
-define gui.slot_button_text_size = 21
+define gui.slot_button_text_size = 20
 define gui.slot_button_text_xalign = 0.5
 define gui.slot_button_text_idle_color = gui.idle_small_color
 define gui.slot_button_text_selected_idle_color = gui.selected_color
@@ -239,7 +239,7 @@ define gui.skip_ypos = 15
 define gui.notify_ypos = 68
 
 ## The spacing between menu choices.
-define gui.choice_spacing = 33
+define gui.choice_spacing = 22
 
 ## Buttons in the navigation section of the main and game menus.
 define gui.navigation_spacing = 6
@@ -290,9 +290,9 @@ define gui.frame_tile = False
 
 ## The height of horizontal bars, scrollbars, and sliders. The width of vertical
 ## bars, scrollbars, and sliders.
-define gui.bar_size = 38
-define gui.scrollbar_size = 18
-define gui.slider_size = 38
+define gui.bar_size = 36
+define gui.scrollbar_size = 16
+define gui.slider_size = 36
 
 ## True if bar images should be tiled. False if they should be linearly scaled.
 define gui.bar_tile = False
@@ -347,44 +347,25 @@ define gui.history_text_xalign = 0.0
 ## The NVL-mode screen displays the dialogue spoken by NVL-mode characters.
 
 ## The borders of the background of the NVL-mode background window.
-define gui.nvl_borders = Borders(0, 15, 0, 30)
 
-## The maximum number of NVL-mode entries Ren'Py will display. When more entries
-## than this are to be show, the oldest entry will be removed.
-define gui.nvl_list_length = 6
-
-## The height of an NVL-mode entry. Set this to None to have the entries
-## dynamically adjust height.
-define gui.nvl_height = 173
-
-## The spacing between NVL-mode entries when gui.nvl_height is None, and between
-## NVL-mode entries and an NVL-mode menu.
-define gui.nvl_spacing = 15
-
-## The position, width, and alignment of the label giving the name of the
-## speaking character.
-define gui.nvl_name_xpos = 645
-define gui.nvl_name_ypos = 0
-define gui.nvl_name_width = 225
-define gui.nvl_name_xalign = 1.0
-
-## The position, width, and alignment of the dialogue text.
-define gui.nvl_text_xpos = 675
-define gui.nvl_text_ypos = 12
-define gui.nvl_text_width = 885
-define gui.nvl_text_xalign = 0.0
-
-## The position, width, and alignment of nvl_thought text (the text said by the
-## nvl_narrator character.)
-define gui.nvl_thought_xpos = 360
-define gui.nvl_thought_ypos = 0
-define gui.nvl_thought_width = 1170
+define gui.nvl_borders      = Borders(0, 15, 0, 30)
+define gui.nvl_list_length  = 6
+define gui.nvl_height       = 173
+define gui.nvl_spacing      = 15
+define gui.nvl_name_xpos    = 645
+define gui.nvl_name_ypos    = 0
+define gui.nvl_name_width   = 225
+define gui.nvl_name_xalign  = 1.0
+define gui.nvl_text_xpos    = 675
+define gui.nvl_text_ypos    = 12
+define gui.nvl_text_width   = 885
+define gui.nvl_text_xalign  = 0.0
+define gui.nvl_thought_xpos   = 360
+define gui.nvl_thought_ypos   = 0
+define gui.nvl_thought_width  = 1170
 define gui.nvl_thought_xalign = 0.0
-
-## The position of nvl menu_buttons.
-define gui.nvl_button_xpos = 675
-define gui.nvl_button_xalign = 0.0
-
+define gui.nvl_button_xpos    = 675
+define gui.nvl_button_xalign  = 0.0
 
 ## Localization ################################################################
 
@@ -412,51 +393,33 @@ init python:
     ## are easily visible on phones.
     @gui.variant
     def small():
-
-        ## Font sizes.
-        gui.text_size = 45
-        gui.name_text_size = 54
-        gui.notify_text_size = 38
-        gui.interface_text_size = 45
-        gui.button_text_size = 45
-        gui.label_text_size = 51
-
-        ## Adjust the location of the textbox.
-        gui.textbox_height = 360
-        gui.name_xpos = 120
-        gui.dialogue_xpos = 135
-        gui.dialogue_width = 1650
-
-        ## Change the size and spacing of various things.
-        gui.slider_size = 54
-
-        gui.choice_button_width = 1860
+        gui.text_size            = 45
+        gui.name_text_size       = 54
+        gui.notify_text_size     = 38
+        gui.interface_text_size  = 45
+        gui.button_text_size     = 45
+        gui.label_text_size      = 51
+        gui.textbox_height       = 360
+        gui.name_xpos            = 120
+        gui.dialogue_xpos        = 135
+        gui.dialogue_width       = 1650
+        gui.slider_size          = 54
+        gui.choice_button_width  = 1860
         gui.choice_button_text_size = 45
-
-        gui.navigation_spacing = 30
-        gui.pref_button_spacing = 15
-
-        gui.history_height = 285
-        gui.history_text_width = 1035
-
+        gui.navigation_spacing   = 30
+        gui.pref_button_spacing  = 15
+        gui.history_height       = 285
+        gui.history_text_width   = 1035
         gui.quick_button_text_size = 30
-
-        ## File button layout.
-        gui.file_slot_cols = 2
-        gui.file_slot_rows = 2
-
-        ## NVL-mode.
-        gui.nvl_height = 255
-
-        gui.nvl_name_width = 458
-        gui.nvl_name_xpos = 488
-
-        gui.nvl_text_width = 1373
-        gui.nvl_text_xpos = 518
-        gui.nvl_text_ypos = 8
-
-        gui.nvl_thought_width = 1860
-        gui.nvl_thought_xpos = 30
-
-        gui.nvl_button_width = 1860
-        gui.nvl_button_xpos = 30
+        gui.file_slot_cols       = 2
+        gui.file_slot_rows       = 2
+        gui.nvl_height           = 255
+        gui.nvl_name_width       = 458
+        gui.nvl_name_xpos        = 488
+        gui.nvl_text_width       = 1373
+        gui.nvl_text_xpos        = 518
+        gui.nvl_text_ypos        = 8
+        gui.nvl_thought_width    = 1860
+        gui.nvl_thought_xpos     = 30
+        gui.nvl_button_width     = 1860
+        gui.nvl_button_xpos      = 30

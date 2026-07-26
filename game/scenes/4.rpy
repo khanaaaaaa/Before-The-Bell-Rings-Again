@@ -443,3 +443,30 @@ label rooftop_ask:
     thought "I'm going to need a lot of new pages."
 
     jump chapter_four
+
+label rooftop_stay:
+
+    narrator "You don't ask."
+    narrator "It's not your question to ask."
+    narrator "You know that."
+    narrator "You stay anyway."
+    narrator "Until the roof door opens and a janitor tells you both to leave."
+    narrator "You walk down the stairs in silence."
+    narrator "At the bottom he says:"
+
+    orion "Thank you."
+
+    mc "For what."
+
+    orion "For not asking."
+
+    narrator "You don't say anything."
+    narrator "You walk in opposite directions."
+    narrator "You spend the whole walk home trying to figure out how he knew."
+    narrator "You don't figure it out."
+    narrator "That's the first time in a long time something has stayed unsolved."
+    narrator "You sit with it."
+    narrator "It's uncomfortable."
+    narrator "You sit with it anyway."
+
+    jump chapter_four

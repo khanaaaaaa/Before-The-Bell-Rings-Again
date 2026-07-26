@@ -117,26 +117,29 @@ init python:
 
 style narrator_window:
     xalign 0.5
-    xsize 900
+    xsize 1000
     yalign 0.88
     ysize None
-    background Frame(Solid("#1a1a2ecc"), 20, 14, 20, 14)
-    padding (28, 16, 28, 16)
+    background Frame(Solid("#0f0e17e6"), 24, 16, 24, 16)
+    padding (32, 18, 32, 18)
 
 style narrator_what:
     font "DejaVuSans.ttf"
     size 28
-    color "#d4b8e0"
+    color "#c8b8e8"
     italic True
     textalign 0.5
     xalign 0.5
     layout "subtitle"
-    line_spacing 6
+    line_spacing 8
 
 style window is default
 style say_label is default
 style say_dialogue is default
-style say_thought is say_dialogue
+style say_thought is say_dialogue:
+    font "DejaVuSans.ttf"
+    color "#b8a8d8"
+    italic True
 
 style namebox is default
 style namebox_label is say_label
@@ -145,22 +148,22 @@ style window:
     xalign 0.5
     xfill True
     yalign 1.0
-    ysize 220
-    background Frame(Solid("#0d0d1acc"), 0, 0, 0, 0)
+    ysize 240
+    background Frame(Solid("#0f0e17f0"), 0, 0, 0, 0)
     padding (0, 0, 0, 0)
 
 style namebox:
-    xpos 80
+    xpos 300
     xanchor 0.0
     xsize None
-    ypos -38
-    ysize 52
-    background Frame(Solid("#f4a7b922"), 16, 6, 16, 6)
-    padding (18, 6, 18, 6)
+    ypos -44
+    ysize 56
+    background Frame(Solid("#f4a7b918"), 18, 6, 18, 6)
+    padding (20, 8, 20, 8)
 
 style say_label:
     font "DejaVuSans.ttf"
-    size 30
+    size 34
     color "#f4a7b9"
     bold True
     xalign 0.0
@@ -170,10 +173,10 @@ style say_dialogue:
     font "DejaVuSans.ttf"
     size 30
     color "#ede6f0"
-    xpos 80
-    xsize 1760
-    ypos 30
-    line_spacing 8
+    xpos 300
+    xsize 1320
+    ypos 40
+    line_spacing 10
     adjust_spacing False
 
 ## Input screen ################################################################
@@ -233,17 +236,28 @@ style choice_button_text is button_text
 
 style choice_vbox:
     xalign 0.5
-    ypos 405
+    ypos 380
     yanchor 0.5
-
-    spacing gui.choice_spacing
+    spacing 18
 
 style choice_button is default:
-    properties gui.button_properties("choice_button")
+    xsize 1100
+    xalign 0.5
+    ypadding 14
+    xpadding 0
+    background Frame(Solid("#1e1b2ecc"), 0, 0, 0, 0)
+    hover_background Frame(Solid("#f4a7b922"), 0, 0, 0, 0)
+    left_bar Solid("#f4a7b9")
+    foreground Frame(Solid("#f4a7b900"), 0, 0, 0, 0)
 
 style choice_button_text is default:
-    properties gui.text_properties("choice_button")
-
+    font "DejaVuSans.ttf"
+    size 30
+    color "#c8b8e8"
+    hover_color "#ffffff"
+    xalign 0.5
+    textalign 0.5
+    yalign 0.5
 
 ## Quick Menu screen ###########################################################
 ##
@@ -370,37 +384,53 @@ screen main_menu():
 
     add gui.main_menu_background
 
-    add Solid("#0d0d1a99")
+    add Solid("#0f0e17d9")
 
-    add Solid("#f4a7b944") xalign 0.5 xsize 1920 ysize 1 ypos 160
+    add Solid("#f4a7b9") xalign 0.5 xsize 1920 ysize 2 ypos 0 alpha 0.4
 
     vbox:
-        xalign 0.96
-        yalign 0.88
-        spacing 6
+        xalign 0.94
+        yalign 0.82
+        spacing 4
 
         text "[config.name!t]":
-            style "main_menu_title"
+            font "DejaVuSans.ttf"
+            size 72
+            color "#f4a7b9"
+            textalign 1.0
 
         text "v[config.version]":
-            style "main_menu_version"
+            font "DejaVuSans.ttf"
+            size 20
+            color "#7ec8e335"
+            textalign 1.0
 
     vbox:
-        style_prefix "navigation"
-        xpos 80
-        yalign 0.88
-        spacing 10
+        xpos 100
+        yalign 0.82
+        spacing 8
 
-        textbutton _("Start")       action Start()
-        textbutton _("Load")        action ShowMenu("load")
-        textbutton _("Preferences") action ShowMenu("preferences")
-        textbutton _("About")       action ShowMenu("about")
+        textbutton _("Start")       action Start() style "mm_button"
+        textbutton _("Load")        action ShowMenu("load") style "mm_button"
+        textbutton _("Preferences") action ShowMenu("preferences") style "mm_button"
+        textbutton _("About")       action ShowMenu("about") style "mm_button"
 
         if renpy.variant("pc"):
-            textbutton _("Quit") action Quit(confirm=False)
+            textbutton _("Quit") action Quit(confirm=False) style "mm_button"
 
-    add Solid("#7ec8e344") xalign 0.5 xsize 1920 ysize 1 ypos 920
+    add Solid("#7ec8e3") xalign 0.5 xsize 1920 ysize 1 ypos 1079 alpha 0.3
 
+style mm_button is button:
+    background None
+    hover_background None
+    padding (0, 10, 0, 10)
+
+style mm_button_text is button_text:
+    font "DejaVuSans.ttf"
+    size 20
+    color "#9080b0"
+    hover_color "#f4a7b9"
+    selected_color "#7ec8e3"
 
 style main_menu_frame is empty
 style main_menu_vbox is vbox

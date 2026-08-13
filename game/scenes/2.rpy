@@ -9,15 +9,15 @@ label chapter_one:
 
     mc "Chapter 12. Electrostatistics."
 
-    rival "Electric Charges and Fields."
-    rival "The chapter is called {i}Electric Charges and Fields.{/i}"
-    rival "Not Electrostatics."
+    orion "Electric Charges and Fields."
+    orion "The chapter is called {i}Electric Charges and Fields.{/i}"
+    orion "Not Electrostatics."
 
     narrator "You stare at him."
 
     mc "Are you serious right now?"
 
-    rival "Precision."
+    orion "Precision."
 
     mc "Whatever."
 
